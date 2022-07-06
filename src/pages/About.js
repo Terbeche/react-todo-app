@@ -4,10 +4,8 @@ import SinglePage from './SinglePage';
 
 // const { url, path } = useMatch();
 const About = () => (
-  <div>
-    <p>This is the about page</p>
-
-    <ul>
+  <div className="about__content">
+    <ul className="about__list">
       <li>
         <Link to="about-app">About App</Link>
 
