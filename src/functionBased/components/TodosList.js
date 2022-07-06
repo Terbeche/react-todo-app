@@ -1,19 +1,24 @@
-import React from "react"
-import TodoItem from "./TodoItem"
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import TodoItem from './TodoItem';
 
-const TodosList = props => {
+const TodosList = (props) => {
+  const todoList = props;
   return (
     <ul>
-      {props.todos.map(todo => (
+      {todoList.todos.map((todo) => (
         <TodoItem
           key={todo.id}
           todo={todo}
-          handleChangeProps={props.handleChangeProps}
-          deleteTodoProps={props.deleteTodoProps}
-          setUpdate={props.setUpdate}
+          handleChangeProps={todoList.handleChangeProps}
+          deleteTodoProps={todoList.deleteTodoProps}
+          setUpdate={todoList.setUpdate}
         />
       ))}
     </ul>
-  )
-}
-export default TodosList
+  );
+};
+
+TodosList.propTypes = PropTypes.node;
+
+export default TodosList;
