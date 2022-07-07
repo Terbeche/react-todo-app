@@ -1,14 +1,11 @@
-import React from "react"
-import ReactDOM from "react-dom"
-//component file
-import TodoContainer from "./functionBased/components/TodoContainer"
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+// stylesheet
 
-//stylesheet
-import "./functionBased/App.css"
-
-ReactDOM.render(
-    <React.StrictMode>
-      <TodoContainer />
-    </React.StrictMode>,
-    document.getElementById("root")
-  )
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
